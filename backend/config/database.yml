@@ -23,6 +23,8 @@ default: &default
 
 development:
   <<: *default
+  username: test
+  password: test
   database: backend_development
 
   # The specified database role being used to connect to postgres.
@@ -82,5 +84,5 @@ test:
 production:
   <<: *default
   database: backend_production
-  username: backend
-  password: <%= ENV["BACKEND_DATABASE_PASSWORD"] %>
+  username: test
+  password: test
