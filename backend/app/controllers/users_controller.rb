@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authorized, only: [:auto_login]
 
   # REGISTER
-  def create
+  def register
     @user = User.create(user_params) 
     if @user.valid?
       token = encode_token({ user_id: @user.id })
